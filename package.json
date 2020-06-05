@@ -1,0 +1,46 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+    "scripts": {
+    "dev": "NODE_ENV=development node .",
+    "build": "npm-run-all --parallel build:server build:client",
+    "build:client": "next build client",
+    "build:server": "lb-tsc es2017 --outDir server/dist -p server",
+    "start": "node .",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "@loopback/boot": "^2.0.1",
+    "@loopback/context": "^3.1.0",
+    "@loopback/core": "^2.1.0",
+    "@loopback/openapi-v3": "^3.1.0",
+    "@loopback/repository": "^2.0.1",
+    "@loopback/rest": "^3.0.1",
+    "@loopback/rest-explorer": "^2.0.1",
+    "@loopback/service-proxy": "^2.0.1",
+    "tslib": "^1.10.0",
+    "express": "^4.16.4",
+    "npm-run-all": "^4.1.5",
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@loopback/build": "^4.0.1",
+    "source-map-support": "^0.5.16",
+    "@loopback/testlab": "^2.0.1",
+    "@types/node": "^10.17.17",
+    "@typescript-eslint/parser": "^2.24.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@loopback/eslint-config": "^6.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-eslint-plugin": "^2.2.1",
+    "eslint-plugin-mocha": "^6.3.0",
+    "typescript": "~3.8.3"
+  }
+}
